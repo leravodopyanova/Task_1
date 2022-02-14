@@ -13,7 +13,7 @@
             <Canvas fx:id="mainCanvas" height="452.0" onMouseClicked="#canvasMouseClick" width="658.0" />
             <VBox prefHeight="452.0" prefWidth="295.0" style="-fx-background-color: white; -fx-border-style: dotted;">
                <children>
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="153.0" style="-fx-background-color: #B0C4DE;" text="Расположение" textAlignment="CENTER">
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="131.0" prefHeight="24.0" prefWidth="154.0" style="-fx-background-color: #B0C4DE;" text="Фигура" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -21,32 +21,14 @@
                         <Insets left="70.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <HBox prefHeight="36.0" prefWidth="294.0">
+                  <HBox prefHeight="62.0" prefWidth="294.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="18.0" style="-fx-background-color: beige; -fx-border-color: black;" text="x:">
+                        <ChoiceBox fx:id="figureComboBox" prefHeight="26.0" prefWidth="226.0">
                            <HBox.margin>
-                              <Insets left="20.0" top="8.0" />
+                              <Insets left="35.0" top="10.0" />
                            </HBox.margin>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="65.0" fx:id="xField">
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin></TextField>
-                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: beige; -fx-border-color: black;" text="y:">
-                           <HBox.margin>
-                              <Insets left="40.0" top="8.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="yField" prefHeight="26.0" prefWidth="65.0">
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="15.0" />
-                     </VBox.margin>
-                  </HBox>
+                        </ChoiceBox>
+                     </children></HBox>
                   <Label alignment="CENTER" prefHeight="24.0" prefWidth="154.0" style="-fx-background-color: #B0C4DE;" text="Размер">
                      <font>
                         <Font size="18.0" />
@@ -70,7 +52,7 @@
                            </HBox.margin></TextField>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="69.0" prefWidth="294.0">
                      <children>
                         <Label alignment="CENTER" style="-fx-background-color: beige; -fx-border-color: black;" text="Ширина">
                            <HBox.margin>
@@ -86,9 +68,17 @@
                            </HBox.margin>
                         </TextField>
                      </children></HBox>
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="31.0" prefHeight="24.0" prefWidth="154.0" style="-fx-background-color: #B0C4DE;" text="Цвет" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </Label>
                   <ColorPicker fx:id="colorPicker" onAction="#colorOnAction" prefHeight="26.0" prefWidth="256.0">
                      <VBox.margin>
-                        <Insets left="20.0" />
+                        <Insets left="20.0" top="10.0" />
                      </VBox.margin></ColorPicker>
                </children></VBox>
             <ButtonBar prefHeight="40.0" prefWidth="954.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-style: dotted;">
