@@ -1,43 +1,28 @@
 package model;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public abstract class Shape  {
-    double x;
-    double y;
-    //параметры фигуры - приватные поля
-    Color color;
+public abstract class Shape implements ShapeDraw {
+    private Color color;
+    private double length;
+    private double width;
+    private double x;
+    private double y;
 
-    // объявление абстрактных методов
-    abstract double area();
-    public abstract String toString();
-    public abstract void draw(GraphicsContext gr);
+    public Shape(){
+    }
 
-    // конструктор
-    public Shape(Color color) {
-        System.out.println("Shape constructor called");
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    // реализация методов
-    public void setColor(Color color) {
-        this.color=color;
-    }
-
+    @Override
+    public abstract void draw(GraphicsContext gr);
+    @Override
+    public abstract String nameFig();
 }
